@@ -1,5 +1,6 @@
-## Put comments here that give an overall description of what your
-## functions do
+## In the two functions to follow we are going to create a method of storing a matrix 
+# in the global environment such that it can be referenced when needed. This saves computation
+# during repeated matrix inverse operations.
 
 # In the following function we are going to create a matrix x and invMat in the global
 # environment so that we can reference the cahced inverse instead of computing a new 
