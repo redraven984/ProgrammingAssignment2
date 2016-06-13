@@ -1,8 +1,11 @@
 ## Put comments here that give an overall description of what your
 ## functions do
 
-## Write a short comment describing this function
-
+# In the following function we are going to create a matrix x and invMat in the global
+# environment so that we can reference the cahced inverse instead of computing a new 
+# inverse each time it is required. The function below provides means to "get" the
+# value of the matrix from the global environment, set the value of the inverse in the
+# global environment, and then get the value of the inverse in the global environment.
 makeCacheMatrix <- function(x = matrix()) {
   invMat <- NULL
   set <- function(y) {
@@ -17,7 +20,11 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+# The function below either caches the value of the matrix inverse, or recalls a previously
+# cached version of the inverse. First the function gets the value of the global variable
+# invMat. If it exists, then the function returns this value. If the value is NULL, then
+# the function computes an inverse, caches it in the global environment, and then returns the
+# inverse.
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
